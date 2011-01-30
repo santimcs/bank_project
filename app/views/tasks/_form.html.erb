@@ -1,0 +1,17 @@
+<%= simple_form_for(@task) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="inputs">
+    <%= f.input :sequence %>
+    <%= f.input :name %>
+    <%= f.input :description %>
+    <%= f.association :project, :include_blank => false %>
+    <%= f.input :from_date %>
+    <%= f.input :to_date %>
+    <%= f.input :finished %>
+  </div>
+
+  <div class="actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>
